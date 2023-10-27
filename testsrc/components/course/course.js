@@ -9,7 +9,6 @@ const Course = () => (
       <br></br>
       <li>Java</li>
       <li>ReactJS</li>
-      <li>Java Interview Questions</li>
     </div>
   );
 

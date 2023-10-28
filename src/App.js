@@ -15,7 +15,7 @@ import Footer from "./footer";
                 <Navbar></Navbar>
                 <div className="content">
                     <Routes>
-                       
+                    <Route path="/" element={ <Home/>} /> 
                         <Route path="/homepage" element={ <Home/>} /> 
                         <Route path="/course" element={ <Course/> }/>
                         <Route path="/login" element={ < Login/> }/>

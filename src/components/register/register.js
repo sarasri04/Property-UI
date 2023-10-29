@@ -1,28 +1,112 @@
-import React from 'react';
+//import React from 'react';
+import { React, useState } from "react"; 
+import "bootstrap/dist/css/bootstrap.css"; 
 
-const Register = () => (
+import { Link,useNavigate } from 'react-router-dom';
+import './sytle.css';
+import { Button, Container, FormGroup, Form} from "reactstrap";
+
+const Register = () => {
+  const initialFormState = {
+    taskName: '',
+    description: '',
+    taskStartDate: '',
+    taskEndDate: '',
+    totalEffortRequired: '',
+    taskStatus: '',
+   
+  };
+  const [group, setGroup] = useState(initialFormState);
+  const navigate = useNavigate();
+  
+  const handleChange = (event) => {
+  const { name, value } = event.target
+
+    setGroup({ ...group, [name]: value })
+  }
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+console.log(group);
+
+await fetch(`http://localhost:8082/todolist/api/v1/user/add-list`, {
+  method:'POST',
+  mode: 'cors', 
+  headers: {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(group)
+ 
+});
+setGroup(initialFormState);
+navigate('/homepage');
+}
+  return(
     <div>
-     
-      <div>
-     <h1><center> Register your Details</center><br></br></h1> 
-      <center> <label for="userName">FullName</label>
-               <input type="text" id="FullName" name="userName"/> <br/> <br/>
-               <label for="password">Password</label>
-               <input type="text" id="password" name="password"/> <br/> <br/>
-               <label for="password">Date of Birth</label>
-               <input type="text" id="DOB" name="DOB"/> <br/> <br/>
-               <label for="password">Mobile Number</label>
-               <input type="text" id="mobileNumber" name="mobileNumber"/> <br/> <br/>
-               <label for="password">EmailId</label>
-               <input type="text" id="emailID" name="emailID"/> <br/> <br/>
-               <label for="password">Country</label>
-               <input type="text" id="country" name="country"/> <br/> <br/>
-               <button>Register</button>
-              
-        </center> 
-        
-    </div>
-    </div>
-  );
+    <Container>
+   <Form className="form" onSubmit={handleSubmit}>
+   <center><p>Register your Details</p></center>
+       <FormGroup>
+         <label className="form__label" for="taskName">Full Name</label>
+         <input className="form__input" type="text" name="taskName" id="taskName" value={group.taskName || ''} onChange={handleChange} placeholder="enter your full name"/>
+         </FormGroup>
+         <FormGroup>
+         <label className="form__label" for="description">Password</label>
+         <input className="form__input" type="text" name="description" id="description" value={group.description || ''} onChange={handleChange} placeholder=""/>
+         </FormGroup>
+       <FormGroup>
+         <label className="form__label" for="taskStartDate">Date of Birth </label>
+         <input className="form__input" type="text" name="taskStartDate" id="taskStartDate" value={group.taskStartDate || ''} onChange={handleChange}  placeholder=""/>
+       </FormGroup>
+       
+         <FormGroup>
+         <label className="form__label" for="taskEndDate">Mobile Number </label>
+         <input className="form__input" type="text" name="taskEndDate" id="taskEndDate" value={group.taskEndDate || ''} onChange={handleChange} placeholder=""/>
+         </FormGroup>
+         
+       <FormGroup>
+       <label className="form__label" for="taskStatus">EmailID</label>
+       <input className="form__input" type="text" name="taskStatus" id="taskStatus" value={group.taskStatus || ''} onChange={handleChange}  placeholder="xyz@company.com"/>
+       </FormGroup>
+         
+       <FormGroup>
+       <label className="form__label" for="taskStatus">Address Line 1</label>
+       <input className="form__input" type="text" name="taskStatus" id="taskStatus" value={group.taskStatus || ''} onChange={handleChange}  placeholder=""/>
+       </FormGroup>
 
+       <FormGroup>
+       <label className="form__label" for="taskStatus">City</label>
+       <input className="form__input" type="text" name="taskStatus" id="taskStatus" value={group.taskStatus || ''} onChange={handleChange}  placeholder=""/>
+       </FormGroup>
+
+       <FormGroup>
+       <label className="form__label" for="taskStatus">Postal Code</label>
+       <input className="form__input" type="text" name="taskStatus" id="taskStatus" value={group.taskStatus || ''} onChange={handleChange}  placeholder=""/>
+       </FormGroup>
+
+       <FormGroup>
+       <label className="form__label" for="taskStatus">State</label>
+       <input className="form__input" type="text" name="taskStatus" id="taskStatus" value={group.taskStatus || ''} onChange={handleChange}  placeholder=""/>
+       </FormGroup>
+
+         <FormGroup>
+         <label className="form__label" for="totalEffortRequired">Country</label>
+         <input className="form__input" name="totalEffortRequired" type="text" id="totalEffortRequired" value={group.totalEffortRequired || ''} onChange={handleChange} placeholder=""/>
+         </FormGroup>
+         
+         <FormGroup>
+       <center>
+         <Button className="btn"type="submit">Register</Button>{' '} &nbsp;&nbsp;&nbsp; 
+         <Button className="btn" tag={Link} to={{pathname: '/homepage'}}>Cancel</Button>
+        
+       </center>
+       </FormGroup>
+   
+   </Form>
+       </Container>
+        </div> 
+   ); 
+ 
+  };
   export default Register;

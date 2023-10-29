@@ -1,9 +1,10 @@
 import React from "react";
+import '../register/sytle.css';
 
 function Homepage() {
   return (
     
-    <div className="navbar">
+    <div className="form-body">
       
         <h1>RG Technology</h1>
        <div><p>Overview</p>

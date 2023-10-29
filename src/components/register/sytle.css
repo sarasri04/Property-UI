@@ -1,0 +1,40 @@
+body{
+    background: #cdd2d6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #bac5d0, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #9aa8b5, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.form{
+    background-color: rgb(195, 198, 211);
+    border-radius: 5px;
+    width: 550px;
+    margin: 20px auto;
+    padding: 20px;
+    height: 600px;
+}
+.btn{
+    background-color: #273773;
+    padding: 10px 20px;
+    color: white;   
+}
+.form-body{
+    text-align: justify;
+    padding: 50px 100px;
+}
+
+.form-body > *{
+    padding: 5px;
+}
+
+.form__label{
+    text-align: left;
+    width: 180px;
+}
+
+.form_input{
+    width: 200px;
+}
+
+.footer{
+    text-align: center;
+}

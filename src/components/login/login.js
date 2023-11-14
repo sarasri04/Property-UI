@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 import { Link,useNavigate } from 'react-router-dom';
 //import './sytle.css';
+import '../register/sytle.css';
 import { Button, Container, FormGroup, Form} from "reactstrap";
 
 const Login = () => {
@@ -49,8 +50,8 @@ navigate('/homepage');
          <input className="form__input" type="text" name="userName" id="userName" value={group.userName || ''} onChange={handleChange} placeholder=""/>
          </FormGroup>
          <FormGroup>
-         <label className="form__label" for="description">Password</label>
-         <input className="form__input" type="text" name="password" id="password" value={group.password || ''} onChange={handleChange} placeholder=""/>
+         <label className="form__label" for="password">Password (8 characters minimum)</label>
+         <input className="form__input" type="text" name="password" id="password" minlength="8" value={group.password || ''} onChange={handleChange} placeholder=""/>
          </FormGroup>
          
          <FormGroup>

@@ -48,15 +48,19 @@ navigate('/homepage');
    <Form className="form" onSubmit={handleSubmit}>
    <center><p>Register your Details</p></center>
        <FormGroup>
-         <label className="form__label" for="taskName">Full Name</label>
-         <input className="form__input" type="text" name="taskName" id="taskName" value={group.taskName || ''} onChange={handleChange} placeholder="enter your full name"/>
+         <label className="form__label" for="firstName">First Name</label>
+         <input className="form__input" type="text" name="firstName" id="firstName" value={group.firstName || ''} onChange={handleChange} placeholder="first name"/>
          </FormGroup>
          <FormGroup>
-         <label className="form__label" for="description">Password</label>
-         <input className="form__input" type="text" name="description" id="description" value={group.description || ''} onChange={handleChange} placeholder=""/>
+         <label className="form__label" for="lastName">Last Name</label>
+         <input className="form__input" type="text" name="lastName" id="lastName" value={group.lastName || ''} onChange={handleChange} placeholder="last name"/>
+         </FormGroup>
+         <FormGroup>
+         <label className="form__label" for="password">Password</label>
+         <input className="form__input" type="text" name="password" id="password" value={group.password || ''} onChange={handleChange} placeholder=""/>
          </FormGroup>
        <FormGroup>
-         <label className="form__label" for="taskStartDate">Date of Birth </label>
+         <label className="form__label" for="date of Birth">Date of Birth </label>
          <input className="form__input" type="text" name="taskStartDate" id="taskStartDate" value={group.taskStartDate || ''} onChange={handleChange}  placeholder=""/>
        </FormGroup>
        

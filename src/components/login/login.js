@@ -51,7 +51,7 @@ navigate('/homepage');
          </FormGroup>
          <FormGroup>
          <label className="form__label" for="password">Password (8 characters minimum)</label>
-         <input className="form__input" type="text" name="password" id="password" minlength="8" value={group.password || ''} onChange={handleChange} placeholder=""/>
+         <input className="form__input" type="text" name="password" id="password" maxLength="8" value={group.password || ''} onChange={handleChange} placeholder=""/>
          </FormGroup>
          
          <FormGroup>

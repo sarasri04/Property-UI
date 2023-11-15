@@ -27,14 +27,18 @@ body{
 }
 
 .form__label{
-    text-align: left;
-    width: 180px;
+    width: 40%;
 }
+ .center-col{
+     flex: 1;
+     background: scroll;
+ }
 
 .form_input{
-    width: 200px;
+    width:60%;
 }
 
 .footer{
     text-align: center;
+    padding: 10px 10px;
 }

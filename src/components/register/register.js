@@ -8,13 +8,18 @@ import { Button, Container, FormGroup, Form} from "reactstrap";
 
 const Register = () => {
   const initialFormState = {
-    taskName: '',
-    description: '',
-    taskStartDate: '',
-    taskEndDate: '',
-    totalEffortRequired: '',
-    taskStatus: '',
-   
+    firstName: '',
+    lastName: '',
+    password: '',
+    dateOfBirth: '',
+    mobileNumber: '',
+    email: '',
+    courseName : '',
+    addressLine: '',
+    city: '',
+    state: '',
+    postalCode: '',
+    country:'',
   };
   const [group, setGroup] = useState(initialFormState);
   const navigate = useNavigate();
@@ -60,43 +65,46 @@ navigate('/homepage');
          <input className="form__input" type="text" name="password" id="password" value={group.password || ''} onChange={handleChange} placeholder=""/>
          </FormGroup>
        <FormGroup>
-         <label className="form__label" for="date of Birth">Date of Birth </label>
-         <input className="form__input" type="text" name="taskStartDate" id="taskStartDate" value={group.taskStartDate || ''} onChange={handleChange}  placeholder=""/>
+         <label className="form__label" for="dateOfBirth">Date of Birth </label>
+         <input className="form__input" type="text" name="dateOfBirth" id="dateOfBirth" value={group.dateOfBirth || ''} onChange={handleChange}  placeholder=""/>
        </FormGroup>
        
          <FormGroup>
-         <label className="form__label" for="taskEndDate">Mobile Number </label>
-         <input className="form__input" type="text" name="taskEndDate" id="taskEndDate" value={group.taskEndDate || ''} onChange={handleChange} placeholder=""/>
+         <label className="form__label" for="mobileNumber">Mobile Number </label>
+         <input className="form__input" type="text" name="mobileNumber" id="mobileNumber" value={group.mobileNumber || ''} onChange={handleChange} placeholder=""/>
          </FormGroup>
          
        <FormGroup>
-       <label className="form__label" for="taskStatus">EmailID</label>
-       <input className="form__input" type="text" name="taskStatus" id="taskStatus" value={group.taskStatus || ''} onChange={handleChange}  placeholder="xyz@company.com"/>
+       <label className="form__label" for="email">EmailID</label>
+       <input className="form__input" type="text" name="email" id="email" value={group.email || ''} onChange={handleChange}  placeholder="xyz@company.com"/>
        </FormGroup>
-         
        <FormGroup>
-       <label className="form__label" for="taskStatus">Address Line 1</label>
-       <input className="form__input" type="text" name="taskStatus" id="taskStatus" value={group.taskStatus || ''} onChange={handleChange}  placeholder=""/>
+       <label className="form__label" for="courseName">Course Name</label>
+       <input className="form__input" type="text" name="courseName" id="courseName" value={group.courseName || ''} onChange={handleChange}  placeholder=""/>
        </FormGroup>
-
        <FormGroup>
-       <label className="form__label" for="taskStatus">City</label>
-       <input className="form__input" type="text" name="taskStatus" id="taskStatus" value={group.taskStatus || ''} onChange={handleChange}  placeholder=""/>
+       <label className="form__label" for="addressLine">Address Line 1</label>
+       <input className="form__input" type="text" name="addressLine" id="addressLine" value={group.addressLine || ''} onChange={handleChange}  placeholder=""/>
        </FormGroup>
 
        <FormGroup>
-       <label className="form__label" for="taskStatus">Postal Code</label>
-       <input className="form__input" type="text" name="taskStatus" id="taskStatus" value={group.taskStatus || ''} onChange={handleChange}  placeholder=""/>
+       <label className="form__label" for="city">City</label>
+       <input className="form__input" type="text" name="city" id="city" value={group.city || ''} onChange={handleChange}  placeholder=""/>
        </FormGroup>
 
        <FormGroup>
-       <label className="form__label" for="taskStatus">State</label>
-       <input className="form__input" type="text" name="taskStatus" id="taskStatus" value={group.taskStatus || ''} onChange={handleChange}  placeholder=""/>
+       <label className="form__label" for="postalCode">Postal Code</label>
+       <input className="form__input" type="text" name="postalCode" id="postalCode" value={group.postalCode || ''} onChange={handleChange}  placeholder=""/>
+       </FormGroup>
+
+       <FormGroup>
+       <label className="form__label" for="state">State</label>
+       <input className="form__input" type="text" name="state" id="state" value={group.state || ''} onChange={handleChange}  placeholder=""/>
        </FormGroup>
 
          <FormGroup>
-         <label className="form__label" for="totalEffortRequired">Country</label>
-         <input className="form__input" name="totalEffortRequired" type="text" id="totalEffortRequired" value={group.totalEffortRequired || ''} onChange={handleChange} placeholder=""/>
+         <label className="form__label" for="country">Country</label>
+         <input className="form__input" name="country" type="text" id="country" value={group.country || ''} onChange={handleChange} placeholder=""/>
          </FormGroup>
          
          <FormGroup>

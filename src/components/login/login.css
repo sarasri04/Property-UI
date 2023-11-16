@@ -1,0 +1,21 @@
+.login_form{
+    background-color: rgb(195, 198, 211);
+    border-radius: 5px;
+    width: 550px;
+    margin: 20px auto;
+    padding: 20px;
+    height: 500px;
+}
+
+.form-body{
+    text-align: justify;
+    padding: 50px 100px;
+}
+
+.form-body > *{
+    padding: 5px;
+}
+
+.form__label{
+    width: 50%;
+}

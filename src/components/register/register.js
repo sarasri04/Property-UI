@@ -20,6 +20,8 @@ const Register = () => {
     state: '',
     postalCode: '',
     country:'',
+    checkBox:'',
+    
   };
   const [group, setGroup] = useState(initialFormState);
   const navigate = useNavigate();
@@ -107,6 +109,11 @@ navigate('/homepage');
          <input className="form__input" name="country" type="text" id="country" value={group.country || ''} onChange={handleChange} placeholder=""/>
          </FormGroup>
          
+         <FormGroup>
+         <label className="form__label" for="checkBox">Check Box</label>
+         <input className="form__input" name="checkBox" type="text" id="checkBox" value={group.checkBox || ''} onChange={handleChange} placeholder=""/>
+         </FormGroup>
+
          <FormGroup>
        <center>
          <Button className="btn"type="submit">Register</Button>{' '} &nbsp;&nbsp;&nbsp; 

@@ -110,8 +110,8 @@ navigate('/homepage');
          </FormGroup>
          
          <FormGroup>
-         <label className="form__label" for="checkBox">Check Box</label>
-         <input className="form__input" name="checkBox" type="text" id="checkBox" value={group.checkBox || ''} onChange={handleChange} placeholder=""/>
+         <input type="checkbox" id="test1" />
+          <label for="test1"></label>I agree to these <a href="#">Terms and Conditions</a>
          </FormGroup>
 
          <FormGroup>

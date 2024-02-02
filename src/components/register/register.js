@@ -111,7 +111,7 @@ navigate('/homepage');
          
          <FormGroup>
          <input type="checkbox" id="test1" />
-          <label for="test1"></label>I agree to these <a href="#">Terms and Conditions</a>
+          <label for="test1"></label> I agree to these <a href="https://www.naukri.com/termsconditions#g1">Terms and Conditions</a>
          </FormGroup>
 
          <FormGroup>

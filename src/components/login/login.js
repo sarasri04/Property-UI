@@ -52,6 +52,12 @@ navigate('/homepage');
          <label className="form__label" for="password">Password (8 characters minimum)</label>
          <input className="form__input" type="password" name="password" id="password" maxLength="12" value={group.password || ''} onChange={handleChange} placeholder=""/>
          </FormGroup>
+
+         <FormGroup>
+         <input type="checkbox" id="test1" />
+          <label for="test1"></label> I agree to these <a href="https://www.naukri.com/termsconditions#g1">Terms and Conditions</a>
+         </FormGroup>
+         
          <FormGroup>
         <center>
         <Button className="btn"type="submit">Login</Button>{' '} &nbsp;&nbsp;&nbsp; 

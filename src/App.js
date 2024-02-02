@@ -11,8 +11,10 @@ import React from "react";
 import Footer from "./footer";
     function App() {
       return (
+        
         <div>
                 <Navbar></Navbar>
+                
                 <div className="content">
                     <Routes>
                     <Route path="/" element={ <Home/>} /> 

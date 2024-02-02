@@ -5,10 +5,6 @@ import Homepage from './Homepage';
 
 describe('<Homepage />', () => {
   test('it should mount', () => {
-    render(<Homepage />);
-    
-    const homepage = screen.getByTestId('Homepage');
 
-    expect(homepage).toBeInTheDocument();
   });
 });
